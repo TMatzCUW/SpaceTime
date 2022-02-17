@@ -26,7 +26,7 @@ def Scan(a):
 @profile
 def Stor(a):
     n=len(a)
-    b=[0]*1000000
+    b=[0]
     for i in range(n):
         if b[a[i]]==1:
             print("There is a duplicate at ", i)
@@ -34,6 +34,7 @@ def Stor(a):
             return
         else:
             b[a[i]]=1
+            b.append(0)
 
 Stor(listy)
 #Time for this was pretty much instant
